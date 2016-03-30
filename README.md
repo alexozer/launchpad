@@ -11,8 +11,9 @@ go get github.com/alexozer/launchpad
 ### Initialization
 
 ```go
-if pad, err = launchpad.Open(); err != nil {
-    log.Error("error while initializing launchpad")
+pad, err := launchpad.Open()
+if err != nil {
+    log.Fatal("Error initializing launchpad")
 }
 defer pad.Close()
 ```
